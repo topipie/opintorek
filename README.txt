@@ -1,1 +1,25 @@
-Olipa kerran elämä
+Kyseessä Opintorekisteri ohjelma
+
+Ohjelman avulla voit lisätä rekisteriin Oppilaita, Opintojaksoja sekä Arvosanoja oppilaille. Ohjelma sisältää myös näkymän joka kerää kaikki suoritukset yhteen arvioinnin jälkeen.
+
+Reitit näihin CRUD operaatioihin postmanissa ovat:
+http://localhost:3000/opintojakso
+http://localhost:3000/arviointi
+http://localhost:3000/opiskelija
+
+Suoritus näkymänkin saat haettua postmanilla
+
+http://localhost:3000/suoritus
+
+
+Tietokannassa on myös muutama aliohjelma. Yhtä näistä voit käyttää postnamin avulla. Aliohjelmaa pääset käyttämään postmanissa kun menet body -> raw -> JSON ja noudatat ao ohjeita. 
+
+Voit tällä aliohjelmalla lisätä kurssin kunhan syötät postmaniin tavat esim. Tässä muodossa:
+
+{
+  "N": "Pilviohjelmointi",
+  "L": 5,
+  "K": "IN0003030"
+}
+
+ER-Diagrammi muodostuu 3 taulusta jotka ovat "Opisjelija" "Arviointi" ja "Opintojakso". Näiden välille on luotu viiteavaimet.
