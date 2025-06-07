@@ -14,7 +14,7 @@ http://localhost:3000/suoritus
 
 Tietokannassa on myös muutama aliohjelma. Yhtä näistä voit käyttää postnamin avulla. Aliohjelmaa pääset käyttämään postmanissa kun menet body -> raw -> JSON ja noudatat ao ohjeita. 
 
-Voit tällä aliohjelmalla lisätä kurssin kunhan syötät postmaniin tavat esim. Tässä muodossa:
+Voit tällä aliohjelmalla lisätä kurssin tietokantaan kunhan syötät postmaniin tavat ao muodossa. Lisäyksen jälkeen postman tulostaa myös kaikki tällä hetkellä tietokannassa olevat kurssit. N = kurssin nimi, L = Laajuus, K = Kurssin Koodi/tunnus
 
 {
   "N": "Pilviohjelmointi",
@@ -22,4 +22,4 @@ Voit tällä aliohjelmalla lisätä kurssin kunhan syötät postmaniin tavat esi
   "K": "IN0003030"
 }
 
-ER-Diagrammi muodostuu 3 taulusta jotka ovat "Opisjelija" "Arviointi" ja "Opintojakso". Näiden välille on luotu viiteavaimet.
+ER-Diagrammi muodostuu 3 taulusta jotka ovat "Opisjelija" "Arviointi" ja "Opintojakso". Näiden välille on luotu viiteavaimet. ER-Diagrammin ja muut suunnitelmat saat auki arviointi_2025.mwb tiedostosta.
