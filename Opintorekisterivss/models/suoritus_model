@@ -1,0 +1,28 @@
+const db = require('../database');
+
+const suoritus = {
+  getAll: function(callback) {
+    return db.query('select * from suoritus', callback);
+  },
+  getOne: function(id, callback) {
+    return db.query('select * from suoritus where idsuoritus=?', [id], callback);
+  },
+  add: function(suoritus, callback) {
+    return db.query(
+      'insert into suoritus (Sukunimi,Etunimi,Nimi,Arvosana) values(?,?,?,?)',
+      [suoritus.Sukunimi, suoritus.Etunimi, suoritus.Nimi, suoritus.Arvosana],
+      callback
+    );
+  },
+  delete: function(id, callback) {
+    return db.query('delete from suoritus where idsuoritus=?', [id], callback);
+  },
+  update: function(id, suoritus, callback) {
+    return db.query(
+      'update suoritus set Sukunimi=?,Etunimi=?, Nimi=?, Arvosana=? where idsuoritus=?',
+      [suoritus.Sukunimi, suoritus.Etunimi, suoritus.Nimi, suoritus.Arvosana, id],
+      callback
+    );
+  }
+};
+module.exports = suoritus;
